@@ -1,4 +1,4 @@
-class ParksConroller < ApplicationController
+class NationalParksConroller < ApplicationController
 
   def index
     @national_parks = {"national_park": "Hot Springs National Park"}
