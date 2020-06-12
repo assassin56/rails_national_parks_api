@@ -17,12 +17,20 @@ class NationalParksController < ApplicationController
 
   def update
     @national_park = NationalPark.find(params[:id])
-    @national_park.update(park_params)
+    if @national_park.update!(park_params)
+      render status: 200, json: {
+        message: "This National Park has been updated successfully!"
+      }
+    end
   end
 
   def destroy
     @national_park = NationalPark.find(params[:id])
-    @national_park.destroy
+    if @national_park.destroy
+      render status: 200, json: {
+        message: "National Park successfully destroyed :("
+      }
+    end
   end
 
   private

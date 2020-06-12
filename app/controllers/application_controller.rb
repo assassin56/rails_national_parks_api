@@ -7,4 +7,5 @@ end
 
 # rescue_from ActiveRecord::RoutingError do |exception|
 #   json_response({ message: exception.message }, :not_found)
+# end
 end
