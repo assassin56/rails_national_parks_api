@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory(:national_parks) do
-    national_park { "A National Park" }
-    state { "A State" }
+    national_park {Faker::Address.city}
+    state {Faker::Address.state}
   end
 end
