@@ -7,8 +7,13 @@ class Seed
 
   def generate_parks
     20.times do |i|
-      national_park = NationalPark.create!(
+      park = NationalPark.create!(
         national_park: Faker::Address.city,
         state: Faker::Address.state
       )
+      puts "Park #{i}: State is #{park.state} and the National Park is '#{park.national_park}'."
+    end
+  end 
 end
+
+Seed.begin
