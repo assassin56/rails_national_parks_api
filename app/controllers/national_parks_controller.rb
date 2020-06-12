@@ -1,4 +1,4 @@
-class NationalParksConroller < ApplicationController
+class NationalParksController < ApplicationController
 
   def index
     @national_parks = NationalPark.all
@@ -11,8 +11,8 @@ class NationalParksConroller < ApplicationController
   end
 
   def create
-    @national_park = NationalPark.create(park_params)
-    json_response(@national_park)
+    @national_park = NationalPark.create!(park_params)
+    json_response(@national_park, :created)
   end
 
   def update
@@ -27,7 +27,7 @@ class NationalParksConroller < ApplicationController
 
   private
     def json_response(object, status = :ok)
-      render json: object status: status
+      render json: object, status: status
     end
 
     def park_params
