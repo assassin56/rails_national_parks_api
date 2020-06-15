@@ -1,24 +1,73 @@
-# README
+# _National Parks_
+## _By: Antonio Cruz_
+## Description
+_This is an API for a National Park search service that allows users to append and edit objects in the database. Currently, there is no UI to accompany this app._
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1. If you would like to view this project locally... :
 
-* Ruby version
+2. Visit this link https://github.com/assassin56/rails_national_parks_api
+ 
+3. Clone this repo by selecting the "clone or download" button. This will allow you to copy the repo's link.
 
-* System dependencies
+4. While on the command line in your terminal, enter "git clone" followed by the copied url.
 
-* Configuration
+5. Enter "ls" to show a list of files and documents. One of them will be labeled "rails_national_parks_api". Use "cd" followed by the project directory name to navigate there.
 
-* Database creation
+6. While in project directory, run the command "rails s"
 
-* Database initialization
+7. Type in your browser the url "localhost:3000" to access the page.
 
-* How to run the test suite
+8. Utilize Postman to make the API calls from the provided URL.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Known Bugs
+_Currently Lacking Sufficient Testing_
 
-* Deployment instructions
+## Technology
 
-* ...
+* _Git_
+* _GitHub_
+* _Gem_
+* _Ruby_
+* _Rspec_
+* _Rails_
+* _Puma_
+* _Pry_
+* _Bootstrap_
+
+
+## Specs
+
+| Endpoints | Behavior |
+|---|---|
+| Get | The user can enter an ID and receive the JSON object that ID pertains to.|
+| Post | User can enter params and post an object to the db.|
+| Put | User can edit the posted objects attributes.|
+| Delete | The user can delete an object.|
+| Search | The user can search for an object by params.|
+
+
+## Legal
+
+#### MIT License
+
+### Copyright (c) 2020 Antonio Cruz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
