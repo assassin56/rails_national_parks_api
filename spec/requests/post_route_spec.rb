@@ -9,4 +9,8 @@ describe "post a national park route", :type => :request do
   it 'returns the name of the national park' do
     expect(JSON.parse(response.body)['national_park']).to eq('Yellow Stone')
   end
+
+  it 'returns the name of a state to which a national park is associated with' do
+    expect(JSON.parse(response.body)['state']).to eq('Oreygun?')
+  end
 end
