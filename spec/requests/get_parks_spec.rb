@@ -19,9 +19,9 @@ describe "GET all parks route", :type => :request do
 end
 
 describe "GET request error message", :type => :request do
-  before { get '/national_parks/600'}
+  before { get '/national_parks/666'}
 
   it 'returns an error message for unidentifiable national park' do
-    expect(JSON.parse(response.body).to eq({"message"}))
+    expect(JSON.parse(response.body)).to eq({"message" => "Couldn't find NationalPark with 'id'=666"})
   end
 end
