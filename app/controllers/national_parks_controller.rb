@@ -28,7 +28,7 @@ class NationalParksController < ApplicationController
     @national_park = NationalPark.find(params[:id])
     if @national_park.destroy
       render status: 200, json: {
-        message: "National Park successfully destroyed :("
+        message: "National Park successfully deleted!"
       }
     end
   end
