@@ -24,5 +24,9 @@ describe 'delete route', :type => :request do
     it 'should throw an error for an unspecified national park' do
       expect(JSON.parse(response.body)).to eq({"message" => "Couldn't find NationalPark with 'id'=666"})
     end
+
+    it 'should return a 404 status error when deletion is not successfull' do
+      expect(response).to have_http_status(:not_found)
+    end
   end
 end
