@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "get all parks route", :type => :request do
+describe "GET all parks route", :type => :request do
   let!(:national_parks) { FactoryBot.create_list(:national_park, 20)}
   
   before { get '/national_parks' }
@@ -11,5 +11,17 @@ describe "get all parks route", :type => :request do
 
   it 'returns status code 200' do
     expect(response).to have_http_status(:success)
+  end
+
+  it 'returns status ok' do
+    expect(response).to have_http_status(:ok)
+  end
+end
+
+describe "GET request error message", :type => :request do
+  before { get '/national_parks/600'}
+
+  it 'returns an error message for unidentifiable national park' do
+    expect(JSON.parse(response.body).to eq({"message"}))
   end
 end
