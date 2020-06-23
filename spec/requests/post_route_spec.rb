@@ -7,6 +7,6 @@ describe "post a national park route", :type => :request do
   end
 
   it 'returns the name of the national park' do
-    expect(JSON.parse(response.body)['national_park']).to eq('heh?')
+    expect(JSON.parse(response.body)['national_park']).to eq('Yellow Stone')
   end
 end
