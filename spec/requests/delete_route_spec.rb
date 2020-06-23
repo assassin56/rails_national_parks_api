@@ -15,4 +15,14 @@ describe 'delete route', :type => :request do
   it 'returns status 200 ok when delete is successfull' do
     expect(response).to have_http_status(:ok)
   end
+
+  describe 'errors when deleting routes', :type => :request do
+    before do
+      delete "/national_parks/666"
+    end
+
+    it 'should throw an error for an unspecified national park' do
+      expect(JSON.parse(response.body)).to eq({"message" => "Couldn't find NationalPark with 'id'=666"})
+    end
+  end
 end
