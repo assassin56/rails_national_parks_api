@@ -24,4 +24,8 @@ describe "GET request error message", :type => :request do
   it 'returns an error message for unidentifiable national park' do
     expect(JSON.parse(response.body)).to eq({"message" => "Couldn't find NationalPark with 'id'=666"})
   end
+
+  it 'returns status 404' do
+    expect(response).to have_http_status(:not_found)
+  end
 end
