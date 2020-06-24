@@ -22,7 +22,7 @@ _This is an API for a National Park search service that allows users to append a
 8. Utilize Postman to make the API calls from the provided URL.
 
 ## Known Bugs
-_Currently Lacking Sufficient Testing_
+_N/A_
 
 ## Technology
 
@@ -39,13 +39,13 @@ _Currently Lacking Sufficient Testing_
 
 ## Specs
 
-| Endpoints | Behavior |
+| Method Action | Endpoint |
 |---|---|
-| Get | The user can enter an ID and receive the JSON object that ID pertains to.|
-| Post | User can enter params and post an object to the db.|
-| Put | User can edit the posted objects attributes.|
-| Delete | The user can delete an object.|
-| Search | The user can search for an object by params.|
+| GET list of all national parks | localhost:3000/national_parks |
+| GET a national park by its id | localhost:3000/national_parks/[national_park_id] |
+| POST a new national park | localhost:3000/national_parks?national_park=[national_park_param]&state=[state_param]| 
+| PUT/PATCH | 	localhost:3000/national_parks?national_park=[new_national_park_param]&state=[new_state_param] |
+| DELETE a national park record | localhost:3000/national_parks/[national_park_id]|
 
 
 ## Legal
