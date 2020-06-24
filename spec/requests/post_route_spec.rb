@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "post a national park route", :type => :request do
+describe "should post a national park route", :type => :request do
   
   before do
     post '/national_parks', params: { :national_park => "Yellow Stone", :state => "Montana"}
