@@ -10,4 +10,8 @@ describe 'put a national_park route', :type => :request do
   it 'should return updated national park' do
     expect(JSON.parse(response.body)['message']).to eq('This National Park has been updated successfully!')
   end
+  
+  it 'returns an updated status' do
+    expect(response).to have_http_status(200)
+  end
 end
